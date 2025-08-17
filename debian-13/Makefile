@@ -5,7 +5,7 @@ HEADLESS ?= true
 default: install
 
 install:
-	packer build -var 'headless=$(HEADLESS)' .
+	PKR_VAR_headless="$(HEADLESS)" packer build .
 
 clean:
 	rm -rf ./builds
