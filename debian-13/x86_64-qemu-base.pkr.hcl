@@ -70,6 +70,7 @@ build {
   provisioner "shell" {
     scripts = [
       "scripts/aptupdate.sh",
+      "scripts/clean.sh"
     ]
   }
 }

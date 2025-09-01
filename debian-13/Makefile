@@ -1,10 +1,9 @@
-.PHONY: install clean
+.PHONY: base vagrant clean
 
 HEADLESS ?= true
 
-default: install
-
-install: base
+default:
+	@echo "Please run 'make base' or 'make vagrant'"
 
 base:
 	PKR_VAR_headless="$(HEADLESS)" packer build x86_64-qemu-base.pkr.hcl
