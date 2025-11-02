@@ -39,7 +39,7 @@ source "qemu" "debian-13-64-vagrant" {
   ssh_username      = "root"
   ssh_password      = var.ssh_password
   ssh_timeout       = "60m"
-  vm_name           = "debian-13-64-base"
+  vm_name           = "debian-13-64-vagrant"
   net_device        = "virtio-net"
   boot_wait         = "5s"
 }
@@ -50,7 +50,8 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/vagrant.sh"
+      "scripts/vagrant.sh",
+      "scripts/clean.sh"
     ]
   }
 }

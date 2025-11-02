@@ -69,7 +69,9 @@ build {
 
   provisioner "shell" {
     scripts = [
-      "scripts/aptupdate.sh",
+      "scripts/upgrade.sh",
+      "scripts/networkd.sh",
+      "scripts/clean.sh"
     ]
   }
 }
