@@ -3,7 +3,14 @@ set -eu
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-apt-get install -y qemu-guest-agent nfs-common openssl curl sudo vim
+apt-get install -y \
+	qemu-guest-agent \
+	nfs-common \
+	openssl \
+	curl \
+	sudo \
+	vim \
+	python3-apt
 
 useradd -m -s /bin/bash -p "$(openssl passwd -1 vagrant)" vagrant
 
